@@ -2,8 +2,243 @@
     margin: 0;
     padding: 0;
 }
-mainbody{
-    background-image: linear-gradient(rgba(0,0,0,0,0.5), rgba(0,0,0,0.5)), url('img1.jpg');
-        background-size: cover;
-        background-position: center;
+.mainbody {
+ background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), /* dark overlay */
+        url('img1.jpg'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
     }
+
+.logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+.logo img {
+        box-shadow: 0 4px 16px rgba(128, 128, 128, 6.5); /* soft grey shadow */
+    }
+
+.intro {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin-bottom: 25px;
+}
+
+.intro-anim {
+    position: relative;
+    height: 16px;
+    margin: 0 auto 20px auto;
+    width: 320px; /* adjust as needed */
+}
+
+.intro-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4px black;
+    z-index: 2;
+    animation: dot-move 2s cubic-bezier(.77,0,.18,1) infinite alternate;
+}
+
+.intro-line {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    height: 2px;
+    width: 0;
+    background: white;
+    z-index: 1;
+    animation: line-draw 2s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+@keyframes dot-move {
+    from { left: 0; }
+    to { left: 304px; } /* width - dot size */
+}
+
+@keyframes line-draw {
+    from { width: 0; }
+    to { width: 304px; }
+}
+
+.intro p {
+    font-size: 1.3em;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(-100px) scaleX(0.8);
+    animation: fly-in 2.2s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+@keyframes fly-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px) scaleX(2);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(200px) scaleX(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 30px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darkorange;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 70px;
+    right: 28px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 2000;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.18);
+}
+
+.footer {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 7px 0;
+    font-size: 0.8em;
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 4px 0;
+    display: inline-flex;
+}
+
+/* Responsive Design */
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 16px rgba(128, 128, 128, 0.5);
+} /* soft grey shadow */
+
+.intro-anim {
+    width: 90%;
+    max-width: 320px;
+}
+@media (max-width: 400px) {
+    .intro-anim {
+        max-width: 90vw;
+    }
+}
+
+.intro h1 {
+    font-size: 2.5em;
+}
+.intro p {
+    font-size: 1.3em;
+}
+.btn {
+    font-size: 1.2em;
+    padding: 8px 14px;
+    margin: 18px 8px;
+}
+@media (max-width: 600px) {
+    .intro h1 {
+        font-size: 1.4em;
+    }
+    .intro p {
+        font-size: 0.95em;
+    }
+    .btn {
+        font-size: 0.95em;
+        padding: 7px 10px;
+        margin: 10px 4px;
+    }
+}
+
+.whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    bottom: 80px;
+    right: 30px;
+}
+@media (max-width: 600px) {
+    .whatsapp-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.mainbody, .intro, .buttons, .footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+body {
+    overflow-x: hidden;
+}
