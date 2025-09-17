@@ -9,7 +9,7 @@
     background-size: cover;
     background-position: center;
     height: 95vh;
-    padding-bottom: 60px; /* space for footer */
+    padding-bottom: 30px; /* space for footer */
     }
 
 .logo {
@@ -232,7 +232,7 @@
         width: 60px;
         height: 60px;
         font-size: 2em;
-        bottom: 80px;
+        bottom: 100px;
         right: 30px;
     }
 }
