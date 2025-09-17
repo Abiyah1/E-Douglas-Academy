@@ -8,8 +8,7 @@
         url('Pictures/img1.jpg'); /* replace with your image path */
     background-size: cover;
     background-position: center;
-    height: 95vh;
-    padding-bottom: 95px; /* space for footer */
+    height: 100vh;
     }
 
 .logo {
