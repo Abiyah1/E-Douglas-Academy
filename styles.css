@@ -247,3 +247,9 @@
 body {
     overflow-x: hidden;
 }
+
+@media (max-width: 600px) {
+    .mainbody {
+        padding-top: 80px; /* Increase this value as needed */
+    }
+}
