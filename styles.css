@@ -170,6 +170,7 @@
     box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
     z-index: 100;
     border-top: 1px solid #0a74da;
+    padding-top: 25px; /* Increase this value for more space above the blue line */
 }
 
 .footer p {
