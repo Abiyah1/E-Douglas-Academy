@@ -12,17 +12,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     }
 
 .registerbox {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 500px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
+    position: absolute;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0.5,0,0,0.7);
-    padding: 20px;
+    animation: fadeIn 3.5s cubic-bezier(0.23, 1, 0.50, 1) both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0%, 0%) scale(0.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0%, 0%) scale(1);
+    }
+}
+
+.Registeroptions {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    z-index: 10;
+    margin-top: -60px;
+    
+}
+
+.Registeroptions h1 {
+    font-size: 20px;
+    color: orangered;
     text-align: center;
     animation: fadeIn 3.5s cubic-bezier(0.23, 1, 0.50, 1) both;
 }
@@ -38,43 +66,37 @@
     }
 }
 
-.Registerheader {
-    font-size: 13px;
-    font-weight: bold;
-    text-align: center;
-    color: orangered;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.options {
+    margin-top: 3px;
+    animation: fadeIn 3.5s cubic-bezier(0.23, 1, 0.50, 1) both;
 }
 
-.Registeroptions {
-   margin-top: 40px;
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   align-items: center;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0%, 0%) scale(0.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0%, 0%) scale(1);
+    }
 }
+
 
 .register-link {
-    display: block;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid orange;
     border-radius: 20px;
-    width: 250px;
-    padding: 12px 0;
-    margin: 0;
+    padding: 10px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     transition: background 0.2s, color 0.2s, transform 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     outline: none;
-}
-
-.register-link i {
-    margin-right: 10px;
 }
 
 .register-link:hover, .register-link:focus {
@@ -84,46 +106,40 @@
 }
 
 /* Responsive Part */
-@media (max-width: 700px) {
+@media (max-width: 500px) {
     .registerbox {
-        width: 95vw;
-        min-width: 0;
-        height: auto;
-        padding: 16px 4vw;
+      display: none;
     }
     .register-link {
-        width: 90vw;
-        font-size: 18px;
-        padding: 10px 0;
+        width: 100vw;
+        font-size: 10rem;
+        padding: 10px;
     }
 }
 
 @media (max-width: 500px) {
     .registerbox {
-        width: 100vw;
-        min-width: 0;
-        height: auto;
-        padding: 10px 2vw;
+       display: none;
     }
     .Registerheader {
-        font-size: 11px;
+        font-size: 1rem;
     }
     .register-link {
-        width: 96vw;
-        font-size: 16px;
-        padding: 8px 0;
+        width: 100vw;
+        font-size: 1rem;
+        padding: 10px;
     }
     .Registeroptions {
-        gap: 12px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 350px) {
     .Registerheader {
-        font-size: 9px;
+        font-size: 1rem;
     }
     .register-link {
-        font-size: 13px;
-        padding: 6px 0;
+        font-size: 1rem;
+        padding: 7px;
     }
 }
