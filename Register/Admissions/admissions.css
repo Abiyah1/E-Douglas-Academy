@@ -34,8 +34,10 @@
     font-weight: bold;
     text-align: center;
     margin: 10px;
-    width: 200px;
-    height: 150px;
+    width: 90%;
+    max-width: 200px;
+    height: auto;
+    display: block;
 }
 
 .registerbox {
@@ -49,8 +51,8 @@
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0.5,0,0,0.7);
     animation: fadeIn 3.5s cubic-bezier(0.23, 1, 0.50, 1) both;
-    padding: 20px;
-    font-size: 1.3em;
+    padding: 1em;
+    font-size: 1.2em;
     transition: all 0.5s ease-in-out;
 }
 
@@ -88,103 +90,45 @@
 
 /* Responsive Part */
 
-@media (max-width: 600px) {
-    .registerbox {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        height: auto;
-        font-size: 1em;
-        overflow: hidden;
+@media (max-width: 768px) {
+    .register-heading {
+        font-size: 5vw;
+        top: 5vh;
         
     }
-    
-    .register-icon {
-        font-size: 1.2em;
-    }
-    
-    .register-heading {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        top: 70px;
+
+    .registerbox {
+        font-size: 1em;
+        padding: 1em;
     }
 
     .register-link {
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 10px;
-        bottom: 500px;
-        width: auto;
-        height: auto;
-        display: inline-block;
+        max-width: 90%;
+        max-width: 200px;
+        margin: 5px, 0, 5px, 0;
     }
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 439px) {
+    .register-heading {
+        font-size: 5vw;
+        top: 0vh;
+    }
 
     .registerbox {
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        width: 50%;
-        height: auto;
         font-size: 0.9em;
-        overflow: hidden;
+        padding: 0.8em;
     }
-    
+
     .register-icon {
-        font-size: 1em;
-    }
-    
-    .register-heading {
         font-size: 1.2em;
-        margin-bottom: 20px;
-        top: 15px;
     }
 
     .register-link {
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        bottom: 500px;
-        width: auto;
-        height: auto;
-        display: inline-block;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 300px) {
-
-    .registerbox {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 10px;
-        width: 50%;
-        height: auto;
-        font-size: 0.9em;
-    }
-    
-    .register-icon {
-        font-size: 1em;
-    }
-    
-    .register-heading {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        top: 5px;
-    }
-
-    .register-link {
-        margin: 0px;
-        bottom: 500px;
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 95%;
+        max-width: 180px;
+        margin: 5px, 0, 5px, 0;
+        bottom: 50px;
     }
 }
