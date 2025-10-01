@@ -72,6 +72,14 @@
     }
 }
 
+@media (max-width: 768px) {
+  .mainbody {
+    text-align: center;
+    padding: 1em;
+    background-size: cover;
+    background-position: calc(100% + 150px) center;
+  }
+
 
 /* Responsive Part 
 
