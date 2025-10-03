@@ -1,0 +1,197 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Root variables for easy theming */
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --accent:#0b5fff;
+  --muted:#6b7280;
+  --text:#0f1724;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --max-width:900px;
+  --radius:12px;
+  --shadow:0 6px 20px rgba(15,23,36,0.08);
+  --glass:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Page layout */
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,#eef2ff 0%, var(--bg) 40%);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* Main container centered with comfortable width */
+.mainbody{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:48px 20px;
+}
+
+/* Card-like inner container */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:32px;
+  border:1px solid rgba(15,23,36,0.04);
+}
+
+/* Section headings */
+.heading{
+  display:block;
+  margin:0 0 12px 0;
+  font-size:1.375rem; /* 22px */
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:-0.2px;
+  line-height:1.15;
+  padding-bottom:6px;
+  border-bottom:2px solid rgba(11,95,255,0.06);
+}
+
+/* Elevator pitch paragraph */
+.elevator-pitch{
+  margin:0 0 18px 0;
+  font-size:1rem;
+  color:#111827;
+  background:linear-gradient(90deg, rgba(11,95,255,0.02), rgba(0,0,0,0.00));
+  padding:14px 16px;
+  border-radius:10px;
+  border:1px dashed rgba(11,95,255,0.06);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* General paragraph styling */
+.container > p{
+  margin:12px 0;
+  color:var(--muted);
+  font-size:0.98rem;
+}
+
+/* Lists */
+ul{
+  margin:10px 0 18px 20px;
+  padding:0;
+  color:var(--muted);
+}
+
+ul li{
+  margin:8px 0;
+  line-height:1.45;
+}
+
+/* Nested list styling */
+ul li ul{
+  margin-top:8px;
+  margin-left:14px;
+  list-style-type:disc;
+}
+
+/* Emphasize currency and important numbers */
+li, p{
+  font-variant-numeric:tabular-nums;
+}
+
+li strong, p strong{
+  color:var(--text);
+}
+
+/* Payment badges to highlight amounts */
+.payment-amount{
+  display:inline-block;
+  background:rgba(11,95,255,0.08);
+  color:var(--accent);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:600;
+  margin-left:8px;
+  font-size:0.95rem;
+}
+
+/* Small note style used for terms */
+.note{
+  display:block;
+  margin-top:8px;
+  font-size:0.88rem;
+  color:#475569;
+}
+
+/* Accessibility: focus outlines for keyboard users */
+a:focus, button:focus{
+  outline:3px solid rgba(11,95,255,0.12);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #6b7280;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  
+  border: none;
+  transition: background 160ms ease;
+}
+.btn:focus,
+.btn:hover {
+  background: #16a34a;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11,102,255,0.12);
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .container{
+    padding:20px;
+    border-radius:10px;
+  }
+
+  .heading{
+    font-size:1.125rem;
+  }
+
+  .elevator-pitch{
+    padding:12px;
+    font-size:0.98rem;
+  }
+}
+
+/* Utility helpers */
+.text-muted{ color:var(--muted); font-size:0.95rem; }
+.kv{ display:flex; gap:12px; align-items:center; font-weight:600; color:#111827; }
+.success{ color:var(--success); font-weight:700; }
+.danger{ color:var(--danger); font-weight:700; }
+
+/* Print-friendly adjustments */
+@media print{
+  html,body{ background:#fff; }
+  .container{ box-shadow:none; border:none; }
+  .elevator-pitch{ border:none; background:transparent; padding:0; }
+}
