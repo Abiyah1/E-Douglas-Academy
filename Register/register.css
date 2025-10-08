@@ -5,7 +5,7 @@
 .mainbody {
  background-image: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), /* dark overlay */
-        url('img2.jpg'); /* replace with your image path */
+        url('img1.jpg'); /* replace with your image path */
     background-size: cover;
     background-position: center;
     height: 100vh;
