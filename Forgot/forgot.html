@@ -10,39 +10,38 @@
         <title>Login Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="forgot.css">
         <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container">
+            <div class="close-div">
+                    <a href="../Login/login.html" class="close-btn" title="Close">
+                        <i class="fa fa-close" style="font-size:25px"></i>
+                    </a>
+            </div>
             <div class="header">
+                
                 <div class="logo-div">
                     <img src="logo.jpg" height="50px" width="60px" alt="e-douglas logo">
                     <h2>E-Douglas Technologies</h2>
                 </div>
-                <h3>Sign in</h3>
-                <h5>Use your E-Douglas Account</h5>
+                <h3>Recover password</h3>
             </div>
             
             <form action="/login" method="post">
-                <input class="input" type="email" id="email" name="email" placeholder="Email or Phone Number" required>
-                <br>
-                <input class="input" type="password" id="password" name="password" placeholder="Password" required>
+                <input class="input" type="email" id="email" name="email" placeholder="Email or Unique ID" required>
                 <br>
                 <div class="mini-div">
-                    <div class="checkbox-div">
-                        <input class="checkbox" type="checkbox" id="show-password" name="show-password">
-                        <h6>Show Password</h6>
-                    </div>
-                    <h6><a href="../Forgot/forgot.html">Forgot Password?</a></h6>
+                    <!--h5><a "onclick="changeToPhone()">Use phone number instead</a></h5-->
+                    <button id="mini-btn" class="trans-btn" onclick="changeToPhone()">Use phone number instead</button>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">Proceed</button>
             </form>
-
-            <p>Don't have an account yet? <a href="../Account/account.html">Create one</a></p>
         </div>
                            
         <script>
@@ -50,6 +49,22 @@
             const show = this.checked;
             document.getElementById("password").type = show ? "text" : "password"; 
             });
+
+            function changeToPhone(){
+                const input=document.getElementById("email");
+                input.type="tel";
+                if (input.placeholder==="Phone number"){
+                    input.placeholder="Email or Unique ID";
+                } else {
+                    input.placeholder="Phone number";
+                }
+
+                const btn=document.getElementById("mini-btn");
+                if (btn.textContent==="Use email or unique ID instead"){
+                    btn.textContent="Use phone number instead";
+                } else
+                btn.textContent="Use email or unique ID instead";
+            }
         </script>
 
         
